@@ -36,4 +36,13 @@ public class Heart : MonoBehaviour
         }
         learpingEnd?.Invoke(endValue);
     }
+        public void Destroy(float value)
+    {
+        _image.fillAmount = value;
+        Destroy(this.gameObject);
+    }
+    public void Fill(float value)
+    {
+        _image.fillAmount = value;
+    }  
 }
