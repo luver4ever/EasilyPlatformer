@@ -22,12 +22,12 @@ public class PlayerMovement : MovementPhysics
 
         _animator.SetFloat("VelocityX", Mathf.Abs(_targetVelocity.x));
 
-        _animator.SetFloat("VelocityY", _velocity.y);
-
         if (Input.GetKey(KeyCode.Space) && _grounded)
         {
             _velocity.y = 5;
         }
+        
+        _animator.SetFloat("VelocityY", _velocity.y);
     }
 
     private void Flip(float deltaX)
