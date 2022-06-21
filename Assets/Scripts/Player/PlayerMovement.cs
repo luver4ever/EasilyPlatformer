@@ -26,7 +26,6 @@ public class PlayerMovement : MovementPhysics
 
         if (Input.GetKey(KeyCode.Space) && _grounded)
         {
-
             _velocity.y = 5;
         }
     }
