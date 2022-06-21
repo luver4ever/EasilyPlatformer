@@ -19,7 +19,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
          _health -= damage;
-        if (_health <= 0)
+         HealthChanged?.Invoke(_health);
+         if (_health <= 0)
             Time.timeScale = 0f;
     }
 
